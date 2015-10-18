@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html,body {
+                box-sizing:border-box;
+                font-size:14;
+                font-family:Verdana,Arial,sans-serif;
+            }
+            .under-construction-label {
+                display:block;
+                width:auto;
+                height:auto;
+                position:fixed;
+                top:35%;
+                left:calc(50vw / 2);
+            }
+            .under-construction-label::after {
+                content:"";
+                display:block;
+                position:absolute;
+                top:-100%;
+                left:calc(50% / 2);
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="under-construction-label">UNDER CONSTRUCTION</h1>
+    </body>
+</html>
