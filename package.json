@@ -1,0 +1,24 @@
+{
+  "name": "johndilig-website",
+  "version": "1.0.0",
+  "description": "john dilig website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balbonits/johndilig-website.git"
+  },
+  "author": "John Dilig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/balbonits/johndilig-website/issues"
+  },
+  "homepage": "https://github.com/balbonits/johndilig-website",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.11"
+  }
+}
