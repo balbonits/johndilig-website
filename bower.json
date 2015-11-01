@@ -1,0 +1,20 @@
+{
+  "name": "johndilig-website",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/balbonits/johndilig-website",
+  "authors": [
+    "jd <jd.foxsports@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  }
+}

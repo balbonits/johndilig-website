@@ -11,21 +11,21 @@ app.use(express.static(__dirname + "/public"));
 
 //set root
 app.get("/",function(req,res){
-        if(req.url == "/"){
-            fs.readFile("./public/index.html", function(error, data){
+    if(req.url == "/"){
+        fs.readFile("./public/index.html", function(error, data){
+            res.writeHead(200, {"Content-type":"text/html"});
+            res.end(data);
+        });
+    } else {
+        fs.readFile("./public" + req.url, function(error, data){
+            if (error) {
+                res.writeHead(404, {"Content-type":"text/plain"});
+                res.end("Sorry the page was not found: ");
+            } else {
                 res.writeHead(200, {"Content-type":"text/html"});
                 res.end(data);
-            });
-        } else {
-            fs.readFile("./public" + req.url, function(error, data){
-                if (error) {
-                    res.writeHead(404, {"Content-type":"text/plain"});
-                    res.end("Sorry the page was not found: ");
-                } else {
-                    res.writeHead(200, {"Content-type":"text/html"});
-                    res.end(data);
-                }
-            });
-            
-        }
+            }
+        });
+        
+    }
 }).listen(process.env.PORT || 3000, process.env.IP);
